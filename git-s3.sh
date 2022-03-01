@@ -1,7 +1,5 @@
 #!/bin/bash
-pwd
-cd ../
-ls -ltr
+cd ../ph3-lab-mgmt
 aws s3 sync exprepos/ s3://$BUCKET_ORG_S3_CS_TEST/ --include "*.html" --include "*.js" --include "*.css" --delete
 # --delete flag will remove any file in the s3 that are not on the new build
 
